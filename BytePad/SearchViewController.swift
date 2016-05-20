@@ -73,7 +73,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let downloadButton = UITableViewRowAction(style: .Normal, title: "Download") { action, index in
             
-            var url = String(self.papers[indexPath.row].url)
+            var url: String
+            
+            if self.searchController.active {
+                url = String(self.filteredPapers[indexPath.row].url)
+            } else {
+                url = String(self.papers[indexPath.row].url)
+            }
+            
             url = url.stringByReplacingOccurrencesOfString(" ", withString: "%20")
             print(url)
             let destination = Alamofire.Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
