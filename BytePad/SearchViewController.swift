@@ -118,10 +118,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         }
         
-//        downloadButton.backgroundColor = UIColor(red:1.00, green:0.34, blue:0.30, alpha:1.0)
         
         
-        UIButton.appearance().setTitleColor(UIColor(red:0.00, green:0.0, blue:0.0, alpha:0.45), forState: UIControlState.Normal)
+        UIButton.appearance().setTitleColor(Constants.Color.grey, forState: UIControlState.Normal)
         
         return [downloadButton]
 
@@ -170,7 +169,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         
-        UIButton.appearance().setTitleColor(UIColor(red:0.00, green:0.0, blue:0.0, alpha:0.45), forState: UIControlState.Normal)
+        UIButton.appearance().setTitleColor(Constants.Color.grey, forState: UIControlState.Normal)
         
         onboardingVC.skipButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         onboardingVC.pageControl.pageIndicatorTintColor = UIColor.blackColor()

@@ -17,6 +17,7 @@
 		4B63ABE01CB6B69B00373906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B63ABDE1CB6B69B00373906 /* LaunchScreen.storyboard */; };
 		4B63ABE91CB6BFF200373906 /* Paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63ABE81CB6BFF200373906 /* Paper.swift */; };
 		4BB94C2D1CC393A8006A16CA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB94C2C1CC393A8006A16CA /* SearchViewController.swift */; };
+		4BF1C0C51CFD663500F5DF38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1C0C41CFD663500F5DF38 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4B63ABE11CB6B69B00373906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B63ABE81CB6BFF200373906 /* Paper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paper.swift; sourceTree = "<group>"; };
 		4BB94C2C1CC393A8006A16CA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4BF1C0C41CFD663500F5DF38 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		81C2160A9603F8B7B9256D80 /* Pods-BytePad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BytePad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BytePad/Pods-BytePad.debug.xcconfig"; sourceTree = "<group>"; };
 		8BB7F778CFB12C5760E10275 /* Pods_BytePad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BytePad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				4B42C1271CCB698C00D3E557 /* DownloadsTableCell.swift */,
 				4BB94C2C1CC393A8006A16CA /* SearchViewController.swift */,
 				4B42C1021CC3A47200D3E557 /* DownloadViewController.swift */,
+				4BF1C0C41CFD663500F5DF38 /* Constants.swift */,
 				4B63ABD91CB6B69B00373906 /* Main.storyboard */,
 				4B63ABDC1CB6B69B00373906 /* Assets.xcassets */,
 				4B63ABDE1CB6B69B00373906 /* LaunchScreen.storyboard */,
@@ -235,6 +238,7 @@
 				4BB94C2D1CC393A8006A16CA /* SearchViewController.swift in Sources */,
 				4B42C1281CCB698C00D3E557 /* DownloadsTableCell.swift in Sources */,
 				4B42C1031CC3A47200D3E557 /* DownloadViewController.swift in Sources */,
+				4BF1C0C51CFD663500F5DF38 /* Constants.swift in Sources */,
 				4B63ABE91CB6BFF200373906 /* Paper.swift in Sources */,
 				4B42C1051CC3AE0700D3E557 /* PapersTableCell.swift in Sources */,
 			);
