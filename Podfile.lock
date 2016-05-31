@@ -1,16 +1,16 @@
 PODS:
   - Alamofire (3.3.1)
-  - SwiftSpinner (0.9.5)
+  - Onboard (2.2.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
-  - SwiftSpinner
+  - Onboard
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
+  Onboard: c46261255c0bcbe26ab2823782764c96fca7a33e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

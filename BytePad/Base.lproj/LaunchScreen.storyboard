@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,7 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BYTEPAD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5I-7I-7B5">
+                                <rect key="frame" x="241" y="285.5" width="117" height="29"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="W5I-7I-7B5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Pa3-fu-SSx"/>
+                            <constraint firstItem="W5I-7I-7B5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lUn-d8-b5F"/>
+                            <constraint firstItem="W5I-7I-7B5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="toi-27-ok0"/>
+                            <constraint firstItem="W5I-7I-7B5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="u0r-vL-kAS"/>
+                            <constraint firstItem="W5I-7I-7B5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="x0a-bk-U9X"/>
+                            <constraint firstItem="W5I-7I-7B5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yfR-NK-KfJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lUn-d8-b5F"/>
+                                <exclude reference="toi-27-ok0"/>
+                                <exclude reference="x0a-bk-U9X"/>
+                                <exclude reference="yfR-NK-KfJ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

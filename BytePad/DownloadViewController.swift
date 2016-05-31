@@ -45,27 +45,32 @@ class DownloadViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        
+        let deleteButton = UITableViewRowAction(style: .Normal, title: "Download") { action, index in
             
-//            let fileManager = NSFileManager.defaultManager()
-//            
-//            // Delete 'hello.swift' file
-//            
-//            do {
-//                try fileManager.removeItemAtPath(String(items[indexPath.row].url))
-//            }
-//            catch let error as NSError {
-//                print("Ooops! Something went wrong: \(error)")
-//            }
             
-            items.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
+        
+        //        downloadButton.backgroundColor = UIColor(red:1.00, green:0.34, blue:0.30, alpha:1.0)
+        
+        
+        UIButton.appearance().setTitleColor(UIColor(red:0.00, green:0.0, blue:0.0, alpha:0.45), forState: UIControlState.Normal)
+        
+        return [deleteButton]
+        
     }
     
     
     override func viewDidAppear(animated: Bool) {
+        
+        let titleLabel = UILabel()
+        let colour = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.6)
+        let attributes: [String : AnyObject] = [NSFontAttributeName: UIFont.systemFontOfSize(14), NSForegroundColorAttributeName: colour, NSKernAttributeName : 3.5]
+        titleLabel.attributedText = NSAttributedString(string: "BYTEPAD", attributes: attributes)
+        titleLabel.sizeToFit()
+        self.navigationItem.titleView = titleLabel
         
         items.removeAll()
         
@@ -79,6 +84,8 @@ class DownloadViewController: UIViewController, UITableViewDataSource, UITableVi
             for var file in directoryContents {
                 print(file.lastPathComponent)
                 print(file.absoluteURL)
+                print(file.baseURL)
+                print(file.filePathURL)
                 
                 // Save the data in the list as a tuple
                 self.items.append((file.lastPathComponent!, file.absoluteString))
@@ -103,28 +110,10 @@ class DownloadViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        // Do any additional setup after loading the view.
-        
-       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-
 }

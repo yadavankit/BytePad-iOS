@@ -9,13 +9,34 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Onboard
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate{
     
     //MARK: Variables
+    
     var papers = [Paper]()
     var filteredPapers = [Paper]()
     let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    let firstPage = OnboardingContentViewController(title: nil, body: "Swipe to download", image: UIImage(named: "ss1"), buttonText: nil) { () -> Void in
+        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+        print( 1+1)
+    }
+    
+    
+    
+    let secondPage = OnboardingContentViewController(title: "Page Title", body: "Page body goes here.", image: nil, buttonText: "Skip") { () -> Void in
+        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+        
+    }
+    
+    let thirdPage = OnboardingContentViewController(title: "Page Title", body: "Page body goes here.", image: nil, buttonText: "Skip") { () -> Void in
+        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+        
+    }
+    
     
     // MARK: Outlets
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -85,12 +106,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print(url)
             let destination = Alamofire.Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
             
-            // Spinner in cell
-            
-            //            var selectCell = self.table.cellForRowAtIndexPath(indexPath) as? PapersTableCell
-            //            selectCell!.downloadSpinner.hidden = false
-            
-            // Dismiss the download button
             self.table.editing = false
             
             Alamofire.download(.GET, url, destination: destination).response { _, _, _, error in
@@ -99,13 +114,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 } else {
                     print("Downloaded file successfully")
                 }
-                //                selectCell?.downloadSpinner.hidden = true
             }
 
         }
         
-        downloadButton.backgroundColor = UIColor(red:0.30, green:0.85, blue:0.39, alpha:1.0)
+//        downloadButton.backgroundColor = UIColor(red:1.00, green:0.34, blue:0.30, alpha:1.0)
         
+        
+        UIButton.appearance().setTitleColor(UIColor(red:0.00, green:0.0, blue:0.0, alpha:0.45), forState: UIControlState.Normal)
         
         return [downloadButton]
 
@@ -144,10 +160,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: Defaults
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let onboardingVC = OnboardingViewController(backgroundImage: nil, contents: [firstPage,secondPage,thirdPage])
+        onboardingVC.allowSkipping = true;
+        onboardingVC.skipHandler = {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        UIButton.appearance().setTitleColor(UIColor(red:0.00, green:0.0, blue:0.0, alpha:0.45), forState: UIControlState.Normal)
+        
+        onboardingVC.skipButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        onboardingVC.pageControl.pageIndicatorTintColor = UIColor.blackColor()
+        onboardingVC.pageControl.currentPageIndicatorTintColor = UIColor.redColor()
+//        onboardingVC.pageControl.backgroundColor = UIColor.lightGrayColor()
+        onboardingVC.shouldMaskBackground = false
+        
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        
+        firstPage.iconHeight = CGFloat(screenHeight+44)
+        firstPage.iconWidth = CGFloat(screenWidth)
+        firstPage.underIconPadding = CGFloat(0)
+
+        
+        self.presentViewController(onboardingVC, animated: true, completion: nil)
+        
         self.getPapersData()
+        
+        searchController.searchBar.tintColor = UIColor(red:0.45, green:0.45, blue:0.45, alpha:1.0)
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -158,6 +203,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         activityIndicator.startAnimating()
         
         
+        let titleLabel = UILabel()
+        let colour = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.6)
+        let attributes: [String : AnyObject] = [NSFontAttributeName: UIFont.systemFontOfSize(14), NSForegroundColorAttributeName: colour, NSKernAttributeName : 3.5]
+        titleLabel.attributedText = NSAttributedString(string: "BYTEPAD", attributes: attributes)
+        titleLabel.sizeToFit()
+        self.navigationItem.titleView = titleLabel
     }
     
     
