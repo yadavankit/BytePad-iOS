@@ -48,7 +48,7 @@ class DownloadViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
         
-        let deleteButton = UITableViewRowAction(style: .Normal, title: "Download") { action, index in
+        let deleteButton = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in
             
             
         }
