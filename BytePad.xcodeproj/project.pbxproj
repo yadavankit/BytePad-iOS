@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4203BC617E100F5A37CC42FA /* Pods_BytePad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB7F778CFB12C5760E10275 /* Pods_BytePad.framework */; };
+		21309D348DB240555CBD1513 /* Pods_BytePad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058E9AAC7E5ADD5CF574DFA4 /* Pods_BytePad.framework */; };
 		4B42C1031CC3A47200D3E557 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42C1021CC3A47200D3E557 /* DownloadViewController.swift */; };
 		4B42C1051CC3AE0700D3E557 /* PapersTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42C1041CC3AE0700D3E557 /* PapersTableCell.swift */; };
 		4B42C1281CCB698C00D3E557 /* DownloadsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42C1271CCB698C00D3E557 /* DownloadsTableCell.swift */; };
@@ -21,7 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D55BCB8EB33A0A5231E259B /* Pods-BytePad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BytePad.release.xcconfig"; path = "Pods/Target Support Files/Pods-BytePad/Pods-BytePad.release.xcconfig"; sourceTree = "<group>"; };
+		058E9AAC7E5ADD5CF574DFA4 /* Pods_BytePad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BytePad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E95B947941E6066C7905125 /* Pods-BytePad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BytePad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BytePad/Pods-BytePad.debug.xcconfig"; sourceTree = "<group>"; };
+		2BB193B8E6CAD5263864EECA /* Pods-BytePad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BytePad.release.xcconfig"; path = "Pods/Target Support Files/Pods-BytePad/Pods-BytePad.release.xcconfig"; sourceTree = "<group>"; };
 		4B42C1021CC3A47200D3E557 /* DownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		4B42C1041CC3AE0700D3E557 /* PapersTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapersTableCell.swift; sourceTree = "<group>"; };
 		4B42C1271CCB698C00D3E557 /* DownloadsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadsTableCell.swift; sourceTree = "<group>"; };
@@ -34,8 +36,6 @@
 		4B63ABE81CB6BFF200373906 /* Paper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paper.swift; sourceTree = "<group>"; };
 		4BB94C2C1CC393A8006A16CA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4BF1C0C41CFD663500F5DF38 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		81C2160A9603F8B7B9256D80 /* Pods-BytePad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BytePad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BytePad/Pods-BytePad.debug.xcconfig"; sourceTree = "<group>"; };
-		8BB7F778CFB12C5760E10275 /* Pods_BytePad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BytePad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,29 +43,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4203BC617E100F5A37CC42FA /* Pods_BytePad.framework in Frameworks */,
+				21309D348DB240555CBD1513 /* Pods_BytePad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AE99A7ED5059677D942E06A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				81C2160A9603F8B7B9256D80 /* Pods-BytePad.debug.xcconfig */,
-				1D55BCB8EB33A0A5231E259B /* Pods-BytePad.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		4B63ABC91CB6B69B00373906 = {
 			isa = PBXGroup;
 			children = (
 				4B63ABD41CB6B69B00373906 /* BytePad */,
 				4B63ABD31CB6B69B00373906 /* Products */,
-				2AE99A7ED5059677D942E06A /* Pods */,
-				AF3B41DAEA4F6FFA500B8453 /* Frameworks */,
+				F1F5EBF2DEDAE805B9663A9E /* Pods */,
+				800E956BC4A70DB8A92461C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +94,21 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		AF3B41DAEA4F6FFA500B8453 /* Frameworks */ = {
+		800E956BC4A70DB8A92461C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8BB7F778CFB12C5760E10275 /* Pods_BytePad.framework */,
+				058E9AAC7E5ADD5CF574DFA4 /* Pods_BytePad.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1F5EBF2DEDAE805B9663A9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E95B947941E6066C7905125 /* Pods-BytePad.debug.xcconfig */,
+				2BB193B8E6CAD5263864EECA /* Pods-BytePad.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,12 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B63ABE41CB6B69B00373906 /* Build configuration list for PBXNativeTarget "BytePad" */;
 			buildPhases = (
-				66677A7EC35E04A358F93880 /* Check Pods Manifest.lock */,
+				7CC44F17E448BFAA88AC9ED8 /* [CP] Check Pods Manifest.lock */,
 				4B63ABCE1CB6B69B00373906 /* Sources */,
 				4B63ABCF1CB6B69B00373906 /* Frameworks */,
 				4B63ABD01CB6B69B00373906 /* Resources */,
-				70EC2AD2014134109B2A1146 /* Embed Pods Frameworks */,
-				14BED4F27CD02FB634F44D89 /* Copy Pods Resources */,
+				2D7C822E729EFD855F5DD831 /* [CP] Embed Pods Frameworks */,
+				519D7C6AE68E9AA61BFB27AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,14 +182,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14BED4F27CD02FB634F44D89 /* Copy Pods Resources */ = {
+		2D7C822E729EFD855F5DD831 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BytePad/Pods-BytePad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		519D7C6AE68E9AA61BFB27AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,34 +212,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BytePad/Pods-BytePad-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		66677A7EC35E04A358F93880 /* Check Pods Manifest.lock */ = {
+		7CC44F17E448BFAA88AC9ED8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		70EC2AD2014134109B2A1146 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BytePad/Pods-BytePad-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -353,7 +353,7 @@
 		};
 		4B63ABE51CB6B69B00373906 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81C2160A9603F8B7B9256D80 /* Pods-BytePad.debug.xcconfig */;
+			baseConfigurationReference = 1E95B947941E6066C7905125 /* Pods-BytePad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -366,7 +366,7 @@
 		};
 		4B63ABE61CB6B69B00373906 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D55BCB8EB33A0A5231E259B /* Pods-BytePad.release.xcconfig */;
+			baseConfigurationReference = 2BB193B8E6CAD5263864EECA /* Pods-BytePad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

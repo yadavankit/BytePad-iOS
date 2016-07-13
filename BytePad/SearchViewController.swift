@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Alamofire
 import SwiftyJSON
 import Onboard
+import Alamofire
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate{
     
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let firstPage = OnboardingContentViewController(title: nil, body: "Swipe to download", image: UIImage(named: "ss1"), buttonText: nil) { () -> Void in
         // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
-        print( 1+1)
+        print(1+1)
     }
     
     
@@ -174,7 +174,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         onboardingVC.skipButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         onboardingVC.pageControl.pageIndicatorTintColor = UIColor.blackColor()
         onboardingVC.pageControl.currentPageIndicatorTintColor = UIColor.redColor()
-//        onboardingVC.pageControl.backgroundColor = UIColor.lightGrayColor()
+// onboardingVC.pageControl.backgroundColor = UIColor.lightGrayColor()
         onboardingVC.shouldMaskBackground = false
         
         
@@ -187,7 +187,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         firstPage.underIconPadding = CGFloat(0)
 
         
-        self.presentViewController(onboardingVC, animated: true, completion: nil)
+        //Present Walkthrough only if User launches BytePad for first time
+        if(NSUserDefaults.standardUserDefaults().boolForKey("hasLaunchedOnce") == false)
+        {
+            self.presentViewController(onboardingVC, animated: true, completion: nil)
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLaunchedOnce")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
         
         self.getPapersData()
         
